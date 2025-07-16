@@ -10,6 +10,7 @@ import {
   Instagram,
   Send,
   MessageSquareMore,
+  Facebook
 } from "lucide-react";
 
 const ContactPage = () => {
@@ -66,7 +67,7 @@ const ContactPage = () => {
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Send us a message</h2>
             <form
-              action="mailto:your-email@example.com"
+              action="mailto:mathuraman215@gmail.com"
               method="POST"
               encType="text/plain"
               className="space-y-4"
@@ -108,11 +109,11 @@ const ContactPage = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Reach us directly</h2>
 
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:mathuraman215@gmail.com"
               className="flex items-center text-red-600 hover:underline space-x-2"
             >
               <Mail className="w-5 h-5" />
-              <span>your-email@example.com</span>
+              <span>mathuraman215@gmail.com</span>
             </a>
 
             <a
@@ -125,16 +126,16 @@ const ContactPage = () => {
             </a>
 
             <a
-              href="https://t.me/yourtelegramusername"
+              href="https://www.facebook.com/mohit.mathuria.79?rdid=bK8sDKKLyhbJIzbZ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AjUaXUiEv%2F#"
               target="_blank"
               className="flex items-center text-red-600 hover:underline space-x-2"
             >
-              <Send className="w-5 h-5" />
-              <span>Telegram Channel</span>
+              <Facebook className="w-5 h-5" />
+              <span>Facebook Channel</span>
             </a>
 
             <a
-              href="https://instagram.com/yourinstausername"
+              href="https://www.instagram.com/rj_mohit_mathuriya/?utm_source=qr&igsh=MWpzYmQwcDdyZzdrdg%3D%3D#"
               target="_blank"
               className="flex items-center text-red-600 hover:underline space-x-2"
             >

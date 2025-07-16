@@ -29,6 +29,11 @@ const projectVideos = [
     id: "04uSz8t7eJM",
     title: "Ad done - Digital Marketing",
   },
+  {
+    id: "KiGdA4-aZuA",
+    title: "Ad done - JOOYOO HOTEL",
+  },
+ 
 ];
 
 const voiceOverVideos = [
@@ -49,45 +54,15 @@ const voiceOverVideos = [
     title: "Comedy Story Sample",
   },
   {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
+    id: "y03yc1ibYzY",
+    title: "Bihar Corona Ad",
   },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
+   {
+    id: "EGE_MoUsmRU",
+    title: "Telecomm Ad",
   },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
-  {
-    id: "vjZwU5DCk-4",
-    title: "Comedy Story Sample",
-  },
+ 
+ 
 ];
 
 const driveVideos = [
@@ -278,7 +253,7 @@ const ProjectPage = () => {
       <section className=" bg-gradient-to-r from-red-600 to-pink-600 text-white text-center p-20 max-w-6xl my-20 m-auto px-4 rounded-lg">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto mb-6">
-          Let's discuss how our comprehensive digital services can help you achieve your business goals
+          Let&apos; discuss how our comprehensive digital services can help you achieve your business goals
         </p>
         <Link href={'/contact'}>
         

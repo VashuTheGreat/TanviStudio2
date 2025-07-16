@@ -70,7 +70,37 @@ const ProfessionalWebsite = () => {
       src: "/Elearning.jpg",
       icon: <Monitor className="w-8 h-8" />,
       description: "Interactive e-learning solutions"
-    }
+    },
+    {
+      name: "Narration",
+      src: "/narration.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "Cartoon Dubbing Or Voices",
+      src: "/cartoon.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "IVR",
+      src: "/ivr.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "Character Voices (More Than 10)",
+      src: "/character.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "Narration (Story/other)",
+      src: "/Narration.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
   ];
 
   const services = [

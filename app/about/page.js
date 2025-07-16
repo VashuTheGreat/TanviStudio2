@@ -47,6 +47,43 @@ const services = [
     description:
       "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
   },
+  {
+    image: "logo.jpg",
+    title: "Logo Design",
+    description:
+      "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
+  },
+ 
+  {
+    image: "Pumphletdesign.jpg",
+    title: "Pamphlet Design",
+    description:
+      "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
+  },
+  {
+    image: "webapp.jpg",
+    title: "Website Design and Development",
+    description:
+      "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
+  },
+  {
+    image: "seo.jpeg",
+    title: "Search Engine Marketing",
+    description:
+      "Enhance your website visibility with SEO services to attract more website clicks and business inquiries from potential customers. ",
+  },
+  {
+    image: "Cvp.jpeg",
+    title: "Corporate Video Productio",
+    description:
+      "At a very low cost, you may create stunning videos of your products, services, or client testimonials, explainer & green screen videos.",
+  },
+  {
+    image: "socialmedia.jpg",
+    title: "Social Media Marketing",
+    description:
+      "We offer social media marketing services at a very reasonable cost. Everything is taken care of by us, from graphic design to content management.",
+  },
 ];
 
 

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+"postbuild": "next-sitemap --config next-sitemap.config.cjs"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.34.0",
@@ -31,5 +31,22 @@
     "eslint-config-next": "15.3.1",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.5"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next-sitemap.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arag11/TanviStudio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/arag11/TanviStudio/issues"
+  },
+  "homepage": "https://github.com/arag11/TanviStudio#readme"
 }
