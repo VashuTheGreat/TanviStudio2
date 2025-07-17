@@ -134,7 +134,7 @@ useEffect(() => {
 
       {/* Globe Background Centered */}
       <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
-        <div className="w-[80vw] max-w-[500px] aspect-square animate-spin-slow opacity-30">
+        <div className="w-[200vw] max-w-[600px] aspect-square animate-spin-slow opacity-30">
           <Globe />
         </div>
       </div>

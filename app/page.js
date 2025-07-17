@@ -346,7 +346,7 @@ const ProfessionalWebsite = () => {
   alt={service.name}
   width={800}        // ya aapki desired width
   height={192}       // h-48 = 48 x 4 = 192px
-  className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
+  className=" object-cover transition-transform duration-500 group-hover:scale-110"
 />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -570,7 +570,7 @@ const ProfessionalWebsite = () => {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <span className="text-gray-600">8+ Years Experience</span>
+                    <span className="text-gray-600">5+ Years Experience</span>
                   </div>
                 </div>
 
@@ -595,7 +595,7 @@ const ProfessionalWebsite = () => {
                 </div>
                 <Link href={'/contact'}>
                 <button className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                  Contact Dheeraj
+                  Contact Tanvi
                 </button>
                 </Link>
               </div>
