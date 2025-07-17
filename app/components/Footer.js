@@ -40,7 +40,7 @@ const Footer = () => {
         {/* Brand */}
         <div>
           <h1 className="text-2xl font-bold mb-4">
-            Tanvi<span className="text-red-500">Studio</span>
+            Ovm<span className="text-red-500">Studio</span>
           </h1>
           <p className="text-gray-400 text-sm">
             Ad video production, voiceover, dubbing, animation, and digital branding — by RJ Mohit (Akashwani Radio).
@@ -82,7 +82,7 @@ const Footer = () => {
             <Link href="https://wa.me/917827574020" target="_blank" rel="noopener noreferrer" className="hover:text-white">
               <FaWhatsapp />
             </Link>
-            <Link href="mailto:tanvivoices@gmail.com" className="hover:text-white">
+            <Link href="mailto:Ovmvoices@gmail.com" className="hover:text-white">
               <FaEnvelope />
             </Link>
           </div>
@@ -91,7 +91,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="relative z-10 mt-10 text-center text-gray-500 text-sm">
-        © {currentYear} Tanvi Studio. All rights reserved.
+        © {currentYear} Ovm Studio. All rights reserved.
       </div>
     </footer>
   );
