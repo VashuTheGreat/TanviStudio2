@@ -34,7 +34,7 @@ const Navbar2 = () => {
             </div>
             <Link href="/">
               <span className="text-xl font-bold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
-                TanviStudio
+                OvmStudio
               </span>
             </Link>
           </div>
