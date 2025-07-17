@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Award, Users, Lightbulb, Mic, PenTool, Video, Star } from 'lucide-react';
 import Image from 'next/image';
 import { WordRotate } from '@/components/magicui/word-rotate';
+import { SparklesText } from '@/components/magicui/sparkles-text';
 
 
 
@@ -42,13 +43,7 @@ const services = [
       "Professional video editing tailored to your brand identity. Whether it is for YouTube, ads, or presentations – we ensure visual excellence.",
   },
   {
-    image: "Graphicdesign.jpg",
-    title: "Graphic Design",
-    description:
-      "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
-  },
-  {
-    image: "logo.jpg",
+    image: "logo.png",
     title: "Logo Design",
     description:
       "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
@@ -61,20 +56,20 @@ const services = [
       "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
   },
   {
-    image: "webapp.jpg",
+    image: "webapp.avif",
     title: "Website Design and Development",
     description:
       "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
   },
   {
-    image: "seo.jpeg",
+    image: "seo.avif",
     title: "Search Engine Marketing",
     description:
       "Enhance your website visibility with SEO services to attract more website clicks and business inquiries from potential customers. ",
   },
   {
-    image: "Cvp.jpeg",
-    title: "Corporate Video Productio",
+    image: "Cvp.jpg",
+    title: "Corporate Video Production",
     description:
       "At a very low cost, you may create stunning videos of your products, services, or client testimonials, explainer & green screen videos.",
   },
@@ -83,6 +78,12 @@ const services = [
     title: "Social Media Marketing",
     description:
       "We offer social media marketing services at a very reasonable cost. Everything is taken care of by us, from graphic design to content management.",
+  },
+    {
+    image: "Graphicdesign.jpg",
+    title: "Graphic Design",
+    description:
+      "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
   },
 ];
 
@@ -132,12 +133,32 @@ const AboutPage = () => {
 
       {/* About Hero Section */}
       <section id="about-hero" className="py-24 px-6 text-center">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
+        <h1 className="text-7xl font-extrabold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
           About Us
         </h1>
         <p className="text-xl mt-4 max-w-3xl mx-auto text-gray-600">
           We are a passionate team of creatives, voiceover artists, and digital experts dedicated to transforming your brand through powerful storytelling and cutting-edge technology.
         </p>
+      </section>
+
+                  {/* What We Do */}
+      <section id="services-about" className=" py-20 bg-gradient-to-br from-red-50 via-pink-100 to-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-1xl font-bold mb-10 text-gray-900"><SparklesText className='text-4xl'>What We Do</SparklesText></h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              { title: 'Voiceovers', icon: <Mic className="w-8 h-8" />, text: 'High-quality studio voice recordings in multiple languages.' },
+              { title: 'Creative Scripting', icon: <PenTool className="w-8 h-8" />, text: 'Powerful scripts that drive emotion and conversions.' },
+              { title: 'Video Production', icon: <Video className="w-8 h-8" />, text: 'Engaging videos with seamless edits and sound sync.' }
+            ].map((service, i) => (
+              <div key={i} id={`services-${i}`} className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition ${fadeInUp('services-'+i)}`}>
+                <div className="text-red-600 mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
     
@@ -227,7 +248,7 @@ const AboutPage = () => {
       height={500}
           />
           <div className={fadeInUp('mission')}>
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Our Mission</h2>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900"><SparklesText>Our Mission</SparklesText></h2>
             <p className="text-gray-600 text-lg leading-relaxed">
               To empower individuals and businesses with captivating audio-visual content that resonates, inspires, and converts. Whether it is a short ad, an audiobook, or a complete branding overhaul — we deliver impact, fast.
             </p>
@@ -235,21 +256,21 @@ const AboutPage = () => {
         </div>
       </section>
 
-    <section className="bg-gradient-to-br from-gray-50 via-gray-100 to-white text-gray-800 py-12">
+    <section className="py-20 bg-gradient-to-br from-red-50 via-pink-100 to-white text-gray-800 py-12">
       <div className="max-w-7xl mx-auto px-6 space-y-16">
         
-
+        <div>
         {/* 2. Agency Mission */}
-        <div className="bg-blue-100 p-6 rounded-xl text-center shadow ">
-          <h2 className="text-2xl font-bold">
+        <div className="bg-gradient-to-r from-red-600 to-pink-600 text-white p-7 my-7 rounded-xl text-center text-5xl shadow ">
+          <h2 className="text-4xl font-bold">
             We are your one-stop marketing agency for all your needs!
           </h2>
         </div>
 
         {/* 3. Services List */}
-        <div>
-          <h2 className="text-2xl font-bold mb-4 text-center">Our Services</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-sm">
+        
+          <h2 className="text-5xl font-bold mb-4 p-4 text-center"><SparklesText>Our Services</SparklesText></h2>
+          <div className="grid grid-cols-2 font-bold md:grid-cols-3 lg:grid-cols-4 gap-4 text-sm">
             {[
               "Social Media Marketing",
               "SEO",
@@ -283,38 +304,20 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-
+     
         
 
        
 
        </div>
+
     </section>
 
-      {/* What We Do */}
-      <section id="services-about" className=" py-20 bg-gradient-to-br from-red-50 via-pink-100 to-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-10 text-gray-900">What We Do</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              { title: 'Voiceovers', icon: <Mic className="w-8 h-8" />, text: 'High-quality studio voice recordings in multiple languages.' },
-              { title: 'Creative Scripting', icon: <PenTool className="w-8 h-8" />, text: 'Powerful scripts that drive emotion and conversions.' },
-              { title: 'Video Production', icon: <Video className="w-8 h-8" />, text: 'Engaging videos with seamless edits and sound sync.' }
-            ].map((service, i) => (
-              <div key={i} id={`services-${i}`} className={`bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition ${fadeInUp('services-'+i)}`}>
-                <div className="text-red-600 mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us */}
       <section id="why-us" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-10 text-gray-900">Why Choose Us</h2>
+          <h2 className="text-4xl font-bold mb-10 text-gray-900"><SparklesText>Why too Choose </SparklesText></h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
            {[
   { label: "7+ Years Experience", icon: <Star className="w-8 h-8" /> },
@@ -324,7 +327,7 @@ const AboutPage = () => {
 ].map((item, i) => (
   <div
     key={i}
-    id={`why-${i}`} // ✅ This now matches fadeInUp("why-0"), "why-1", etc.
+    id={`why-${i}`} 
     className={`bg-gradient-to-br from-red-500 to-pink-600 text-white p-6 rounded-xl shadow-lg hover:scale-105 transform transition ${fadeInUp('why-' + i)}`}
   >
     <div className="mb-4">{item.icon}</div>
@@ -336,7 +339,8 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
+
+
     </div>
   );
 };

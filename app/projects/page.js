@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useState, useEffect,useRef } from "react";
-import Navbar from "../components/nav";
-import Footer from "../components/Footer";
 import Image from 'next/image';
 import Link from "next/link";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { LineShadowText } from "@/components/magicui/line-shadow-text";
-import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Globe } from "@/components/magicui/globe";
+import { BackgroundLines } from "@/components/ui/background-lines";
+import { FlipText } from "@/components/magicui/flip-text";
+import { SparklesText } from "@/components/magicui/sparkles-text";
 
 const projectVideos = [
   {
@@ -130,12 +128,13 @@ useEffect(() => {
   return (
     
 <div className="bg-white text-gray-900">
-  <BackgroundBeamsWithCollision>
-    <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
-      
-      {/* Globe Background */}
+<BackgroundBeamsWithCollision>
+  <BackgroundLines className="w-full flex flex-col items-center justify-center px-4">
+    <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center py-20">
+
+      {/* Globe Background Centered */}
       <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
-        <div className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] animate-spin-slow">
+        <div className="w-[80vw] max-w-[500px] aspect-square animate-spin-slow opacity-30">
           <Globe />
         </div>
       </div>
@@ -144,17 +143,20 @@ useEffect(() => {
       <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-pink-500/10 to-purple-500/10 z-0" />
 
       {/* Hero Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-[15vw] font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-none">
-          <TypingAnimation className="text-5xl">Our Services</TypingAnimation>
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
+        <h1 className="text-[15vw] m-4 font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-none">
+          <TypingAnimation className="text-7xl">Our Services</TypingAnimation>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700 leading-relaxed max-w-2xl mx-auto">
           Comprehensive digital solutions to elevate your business and enhance your online presence.
+          From branding to conversion-optimized campaigns, we create digital experiences that truly grow your brand.
         </p>
       </div>
+
     </section>
-  </BackgroundBeamsWithCollision>
+  </BackgroundLines>
+</BackgroundBeamsWithCollision>
 
 
       {/* Video Gallery */}
@@ -181,7 +183,7 @@ useEffect(() => {
                <Image
                 src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                 alt={video.title}
-                width={480} // set according to your design
+                width={480} 
                 height={270}
                 className="w-full h-full object-cover"
               />
@@ -207,7 +209,7 @@ useEffect(() => {
       <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-red-600 mb-12">
-          Our Voice Over
+          <SparklesText className="text-6xl">Our Voice Over</SparklesText>
         </h2>
         <div className="flex space-x-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide justify-center">
           {voiceOverVideos.map((video, index) => (
@@ -261,7 +263,7 @@ useEffect(() => {
      <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-red-600 mb-12">
-          Some of Our Voiceovers Have Millions of Views
+          <SparklesText className="text-5xl">Some of Our Voiceovers Have Millions of Views</SparklesText>
         </h2>
         <div className="flex space-x-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide justify-center">
           {driveVideos.map((video, index) => (
@@ -291,18 +293,18 @@ useEffect(() => {
     {/* Some Other Voiceovers */}
 <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 p-8 rounded-3xl shadow-xl max-w-3xl mx-auto mt-16 text-center">
   <h2 className="text-3xl font-extrabold text-gray-800 mb-8 tracking-tight text-red-600">
-    🎙️ Explore More of Mohit&apos;s Voice Magic
+    <SparklesText className="text-4xl">🎙️ Explore More of Mohit&apos;s Voice Magic</SparklesText>
   </h2>
   <p className="text-gray-600 mb-10 text-sm sm:text-base max-w-xl mx-auto">
     Dive into a selection of diverse voice-over samples delivered with precision, emotion, and clarity. Whether it&apos;s storytelling, explainer, or commercial — Mohit adapts seamlessly to every tone.
   </p>
 
   <div className="space-y-8">
-    {/* Highlighted Voice Over */}
-    <div className="bg-white border border-gray-200 p-5 rounded-xl shadow-inner">
-      <p className="text-base font-medium mb-3 text-yellow-600">✨ Featured Sample</p>
-   
-    </div>
+     
+<div className="bg-white border border-gray-200 p-5 rounded-xl shadow-inner">
+  <p className="text-yellow-600 text-3xl font-bold mb-3">✨ Featured Sample</p>
+</div>
+
 
     {/* Other Voice Samples */}
     <div className="grid sm:grid-cols-2 gap-6">
@@ -329,7 +331,7 @@ useEffect(() => {
 
 
       {/* CTA */}
-      <section className=" bg-gradient-to-r from-red-600 to-pink-600 text-white text-center p-20 max-w-6xl my-20 m-auto px-4 rounded-lg">
+      <section className=" bg-gradient-to-r from-red-600 to-pink-600 text-white text-center p-20 max-w-6xl my-25 m-auto px-4 rounded-lg">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto mb-6">
           Let&apos; discuss how our comprehensive digital services can help you achieve your business goals
