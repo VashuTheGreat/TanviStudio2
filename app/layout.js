@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "./components/nav";
 import Footer from "./components/Footer";
 import { Pointer } from "@/components/magicui/pointer";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,7 +80,6 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Pointer className="fill-purple-500" />
-        {/* <SmoothCursor /> */}
         <Footer />
       </body>
     </html>

@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "../components/nav";
-import Footer from "../components/Footer";
 import Image from 'next/image';
 import Link from "next/link";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { LineShadowText } from "@/components/magicui/line-shadow-text";
-import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Globe } from "@/components/magicui/globe";
+import { BackgroundLines } from "@/components/ui/background-lines";
+import { FlipText } from "@/components/magicui/flip-text";
+import { SparklesText } from "@/components/magicui/sparkles-text";
 
 const projectVideos = [
   {
@@ -91,12 +89,13 @@ const ProjectPage = () => {
   return (
     
 <div className="bg-white text-gray-900">
-  <BackgroundBeamsWithCollision>
-    <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center">
-      
-      {/* Globe Background */}
+<BackgroundBeamsWithCollision>
+  <BackgroundLines className="w-full flex flex-col items-center justify-center px-4">
+    <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center py-20">
+
+      {/* Globe Background Centered */}
       <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
-        <div className="w-[500px] h-[500px] md:w-[700px] md:h-[700px] animate-spin-slow">
+        <div className="w-[80vw] max-w-[500px] aspect-square animate-spin-slow opacity-30">
           <Globe />
         </div>
       </div>
@@ -105,17 +104,20 @@ const ProjectPage = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-pink-500/10 to-purple-500/10 z-0" />
 
       {/* Hero Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-[15vw] font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-none">
+      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight mb-6">
           <TypingAnimation>Our Services</TypingAnimation>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
           Comprehensive digital solutions to elevate your business and enhance your online presence.
+          From branding to conversion-optimized campaigns, we create digital experiences that truly grow your brand.
         </p>
       </div>
+
     </section>
-  </BackgroundBeamsWithCollision>
+  </BackgroundLines>
+</BackgroundBeamsWithCollision>
 
 
       {/* Video Gallery */}
@@ -142,7 +144,7 @@ const ProjectPage = () => {
                <Image
                 src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                 alt={video.title}
-                width={480} // set according to your design
+                width={480} 
                 height={270}
                 className="w-full h-full object-cover"
               />
@@ -168,7 +170,7 @@ const ProjectPage = () => {
       <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-red-600 mb-12">
-          Our Voice Over
+          <SparklesText>Our Voice Over</SparklesText>
         </h2>
         <div className="flex space-x-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide justify-center">
           {voiceOverVideos.map((video, index) => (
@@ -222,7 +224,7 @@ const ProjectPage = () => {
      <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-red-600 mb-12">
-          Some of Our Voiceovers Have Millions of Views
+          <SparklesText>Some of Our Voiceovers Have Millions of Views</SparklesText>
         </h2>
         <div className="flex space-x-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide justify-center">
           {driveVideos.map((video, index) => (

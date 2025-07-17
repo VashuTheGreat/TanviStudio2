@@ -181,6 +181,17 @@ body {
   }
 }
 
+@keyframes sparkle {
+  0%, 100% { opacity: 0.2; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
+.sparkle::after {
+  content: '✨';
+  animation: sparkle 1.5s infinite;
+  margin-left: 6px;
+  display: inline-block;
+}
+
 
 /* In globals.css or Tailwind config layer */
 @layer utilities {

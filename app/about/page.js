@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Award, Users, Lightbulb, Mic, PenTool, Video, Star } from 'lucide-react';
 import Image from 'next/image';
 import { WordRotate } from '@/components/magicui/word-rotate';
+import { SparklesText } from '@/components/magicui/sparkles-text';
 
 
 
@@ -42,13 +43,7 @@ const services = [
       "Professional video editing tailored to your brand identity. Whether it is for YouTube, ads, or presentations – we ensure visual excellence.",
   },
   {
-    image: "Graphicdesign.jpg",
-    title: "Graphic Design",
-    description:
-      "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
-  },
-  {
-    image: "logo.jpg",
+    image: "logo.png",
     title: "Logo Design",
     description:
       "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
@@ -61,20 +56,20 @@ const services = [
       "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
   },
   {
-    image: "webapp.jpg",
+    image: "webapp.avif",
     title: "Website Design and Development",
     description:
       "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
   },
   {
-    image: "seo.jpeg",
+    image: "seo.avif",
     title: "Search Engine Marketing",
     description:
       "Enhance your website visibility with SEO services to attract more website clicks and business inquiries from potential customers. ",
   },
   {
-    image: "Cvp.jpeg",
-    title: "Corporate Video Productio",
+    image: "Cvp.jpg",
+    title: "Corporate Video Production",
     description:
       "At a very low cost, you may create stunning videos of your products, services, or client testimonials, explainer & green screen videos.",
   },
@@ -83,6 +78,12 @@ const services = [
     title: "Social Media Marketing",
     description:
       "We offer social media marketing services at a very reasonable cost. Everything is taken care of by us, from graphic design to content management.",
+  },
+    {
+    image: "Graphicdesign.jpg",
+    title: "Graphic Design",
+    description:
+      "Eye-catching visuals for digital and print platforms. We design logos, banners, social media creatives, and more.",
   },
 ];
 
@@ -238,7 +239,7 @@ const AboutPage = () => {
       {/* What We Do */}
       <section id="services-about" className=" py-20 bg-gradient-to-br from-red-50 via-pink-50 to-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-10 text-gray-900">What We Do</h2>
+          <h2 className="text-4xl font-bold mb-10 text-gray-900"><SparklesText>What We Do</SparklesText></h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               { title: 'Voiceovers', icon: <Mic className="w-8 h-8" />, text: 'High-quality studio voice recordings in multiple languages.' },
@@ -258,7 +259,7 @@ const AboutPage = () => {
       {/* Why Choose Us */}
       <section id="why-us" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-10 text-gray-900">Why Choose Us</h2>
+          <h2 className="text-4xl font-bold mb-10 text-gray-900"><SparklesText>Why Choose </SparklesText></h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
            {[
   { label: "7+ Years Experience", icon: <Star className="w-8 h-8" /> },
