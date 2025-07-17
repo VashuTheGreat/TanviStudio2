@@ -291,10 +291,10 @@ useEffect(() => {
     {/* Some Other Voiceovers */}
 <section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 p-8 rounded-3xl shadow-xl max-w-3xl mx-auto mt-16 text-center">
   <h2 className="text-3xl font-extrabold text-gray-800 mb-8 tracking-tight text-red-600">
-    🎙️ Explore More of Mohit's Voice Magic
+    🎙️ Explore More of Mohit&apos;s Voice Magic
   </h2>
   <p className="text-gray-600 mb-10 text-sm sm:text-base max-w-xl mx-auto">
-    Dive into a selection of diverse voice-over samples delivered with precision, emotion, and clarity. Whether it's storytelling, explainer, or commercial — Mohit adapts seamlessly to every tone.
+    Dive into a selection of diverse voice-over samples delivered with precision, emotion, and clarity. Whether it&apos;s storytelling, explainer, or commercial — Mohit adapts seamlessly to every tone.
   </p>
 
   <div className="space-y-8">
