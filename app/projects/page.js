@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import Image from 'next/image';
 import Link from "next/link";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
@@ -81,10 +81,49 @@ const driveVideos = [
     title: 'YouTube Story 2'
   }
 ];
+
+const otherVo = [
+  {
+    name: "skyrider e rikshaw",
+    src: "https://drive.google.com/file/d/1akJFpOaLWgrJWsi2RhObo0f2LDhHWdfg/preview",
+  },
+  {
+    name: "phone pay ad",
+    src: "https://drive.google.com/file/d/1bCyOd6pFTv4r5ZKqqf67EMrM6GYVCjNX/preview",
+  },
+  {
+    name: "govrnment Bank fraud ad",
+    src: "https://drive.google.com/file/d/1bB2KLnb8bpH2j5sKZDWIcnJBqySGb2s5/preview",
+  },
+  {
+    name: "fraud call",
+    src: "https://drive.google.com/file/d/1bH37CmICeiIx-_jMO5P1BwknUtT_YKV5/preview",
+  },
+  {
+    name: "fastrack company",
+    src: "https://drive.google.com/file/d/1azmzivY_Z3G7X1cG2kBvnLjEywKeHCub/preview",
+  },
+  {
+    name: "Buddha & The Beggar – Voice Narration",
+    src: "https://drive.google.com/file/d/1b6FQPwaeParU-PAZbcKPsyNxmPa2ysXr/preview",
+  },
+];
+
 const ProjectPage = () => {
 
   const [activeVideo, setActiveVideo] = useState(null);
   const [activeVideo2, setActiveVideo2] = useState(null);
+
+
+const canvasRef = useRef(null);
+
+useEffect(() => {
+  if (canvasRef.current) {
+    canvasRef.current.enable(); // if enable is a valid method
+  }
+}, []);
+
+
 
   return (
     
@@ -104,12 +143,12 @@ const ProjectPage = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-pink-500/10 to-purple-500/10 z-0" />
 
       {/* Hero Content */}
-      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight mb-6">
-          <TypingAnimation>Our Services</TypingAnimation>
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
+        <h1 className="text-[15vw] m-4 font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-none">
+          <TypingAnimation className="text-7xl">Our Services</TypingAnimation>
         </h1>
 
-        <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl font-bold text-gray-700 leading-relaxed max-w-2xl mx-auto">
           Comprehensive digital solutions to elevate your business and enhance your online presence.
           From branding to conversion-optimized campaigns, we create digital experiences that truly grow your brand.
         </p>
@@ -170,7 +209,7 @@ const ProjectPage = () => {
       <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-red-600 mb-12">
-          <SparklesText>Our Voice Over</SparklesText>
+          <SparklesText className="text-6xl">Our Voice Over</SparklesText>
         </h2>
         <div className="flex space-x-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide justify-center">
           {voiceOverVideos.map((video, index) => (
@@ -224,7 +263,7 @@ const ProjectPage = () => {
      <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-red-600 mb-12">
-          <SparklesText>Some of Our Voiceovers Have Millions of Views</SparklesText>
+          <SparklesText className="text-5xl">Some of Our Voiceovers Have Millions of Views</SparklesText>
         </h2>
         <div className="flex space-x-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide justify-center">
           {driveVideos.map((video, index) => (
@@ -251,8 +290,48 @@ const ProjectPage = () => {
       </div>
     </section>
 
+    {/* Some Other Voiceovers */}
+<section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 p-8 rounded-3xl shadow-xl max-w-3xl mx-auto mt-16 text-center">
+  <h2 className="text-3xl font-extrabold text-gray-800 mb-8 tracking-tight text-red-600">
+    <SparklesText className="text-4xl">🎙️ Explore More of Mohit&apos;s Voice Magic</SparklesText>
+  </h2>
+  <p className="text-gray-600 mb-10 text-sm sm:text-base max-w-xl mx-auto">
+    Dive into a selection of diverse voice-over samples delivered with precision, emotion, and clarity. Whether it&apos;s storytelling, explainer, or commercial — Mohit adapts seamlessly to every tone.
+  </p>
+
+  <div className="space-y-8">
+     
+<div className="bg-white border border-gray-200 p-5 rounded-xl shadow-inner">
+  <p className="text-yellow-600 text-3xl font-bold mb-3">✨ Featured Sample</p>
+</div>
+
+
+    {/* Other Voice Samples */}
+    <div className="grid sm:grid-cols-2 gap-6">
+      {otherVo.map((item, index) => (
+        <div key={index} className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm text-left">
+          <p className="text-sm font-semibold mb-2 text-orange-700">🎧 {item.name}</p>
+          <iframe
+            src={item.src}
+            width="100%"
+            height="50"
+            allow="autoplay"
+            className="w-full rounded"
+          ></iframe>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
       {/* CTA */}
-      <section className=" bg-gradient-to-r from-red-600 to-pink-600 text-white text-center p-20 max-w-6xl my-20 m-auto px-4 rounded-lg">
+      <section className=" bg-gradient-to-r from-red-600 to-pink-600 text-white text-center p-20 max-w-6xl my-25 m-auto px-4 rounded-lg">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
         <p className="text-xl opacity-90 max-w-2xl mx-auto mb-6">
           Let&apos; discuss how our comprehensive digital services can help you achieve your business goals
