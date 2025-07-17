@@ -5,15 +5,15 @@ import { ChevronDown, Play, Star, Award, Users, Zap, CheckCircle, ArrowRight, Gl
 import Link from 'next/link'
 import Image from 'next/image';
 
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { BackgroundLines } from "@/components/ui/background-lines";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import { Card, Carousel } from '@/components/ui/apple-cards-carousel';
 import { NumberTicker } from '@/components/magicui/number-ticker';
 import { BoxReveal } from '@/components/magicui/box-reveal';
-import { cn } from '@/lib/utils';
-import { SparklesText } from '@/components/magicui/sparkles-text';
-import {
-  DraggableCardBody,
-  DraggableCardContainer,
-} from "@/components/ui/draggable-card";
+
 
 const ProfessionalWebsite = () => {
   const [dots, setDots] = useState([]);
@@ -33,81 +33,75 @@ const ProfessionalWebsite = () => {
   const [isVisible, setIsVisible] = useState({});
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-const ourServices = [
-    {
-    name: "Explainer Video",
-    src: "/explainer.avif",
-    icon: <Play className="w-8 h-8" />,
-    description: "Engaging explainer videos for your brand",
-    className: "absolute top-32 left-[55%] rotate-[10deg]",
-  },
-  {
-    name: "Lipsyng Video",
-    src: "/lypsing.jpg",
-    icon: <Video className="w-8 h-8" />,
-    description: "Seamless lip-sync video production",
-    className: "absolute top-40 left-[25%] rotate-[-7deg]",
-  },
-  {
-    name: "FM Radio",
-    src: "/fm.jpg",
-    icon: <Globe className="w-8 h-8" />,
-    description: "Radio broadcasting and production",
-    className: "absolute top-5 left-[40%] rotate-[8deg]",
-  },
 
-  {
-    name: "Audio Book",
-    src: "/audio.avif",
-    icon: <PenTool className="w-8 h-8" />,
-    description: "Professional audiobook narration",
-    className: "absolute top-20 right-[35%] rotate-[2deg]",
-  },
-  {
-    name: "E-Learning",
-    src: "/Elearning.avif",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Interactive e-learning solutions",
-    className: "absolute top-24 left-[45%] rotate-[-7deg]",
-  },
-  {
-    name: "Cartoon Dubbing Or Voices",
-    src: "/cartoon.png",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Cartoon character voiceovers",
-    className: "absolute top-48 left-[35%] rotate-[-6deg]",
-  },
-  {
-    name: "IVR",
-    src: "/ivr.jpg",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Interactive Voice Response systems",
-    className: "absolute top-56 left-[15%] rotate-[3deg]",
-  },
+  const ourServices = [
     {
-    name: "Narration (Story/other)",
-    src: "/narration.jpg",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Story narration and more",
-    className: "absolute top-16 left-[10%] rotate-[6deg]",
-  },
-  {
-    name: "10+ Character Voices)",
-    src: "/character.jpg",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Multiple character voiceovers",
-    className: "absolute top-36 left-[60%] rotate-[-9deg]",
-  },
+      name: "Dubbing",
+      src: "/dubbing.jpg",
+      icon: <Mic className="w-8 h-8" />,
+      description: "Professional dubbing services with native speakers"
+    },
     {
-    name: "Dubbing",
-    src: "/dubbing.jpg",
-    icon: <Mic className="w-8 h-8" />,
-    description: "Professional dubbing services with native speakers",
-    className: "absolute top-10 left-[20%] rotate-[-5deg]",
-  },
-
-];
-
+      name: "Lipsync Video",
+      src: "/lypsing.jpg",
+      icon: <Video className="w-8 h-8" />,
+      description: "Seamless lip-sync video production"
+    },
+    {
+      name: "FM Radio",
+      src: "/fm.jpg",
+      icon: <Globe className="w-8 h-8" />,
+      description: "Radio broadcasting and production"
+    },
+    {
+      name: "Explainer Video",
+      src: "/explainer.jpg",
+      icon: <Play className="w-8 h-8" />,
+      description: "Engaging explainer videos for your brand"
+    },
+    {
+      name: "Audio Book",
+      src: "/audio.jpg",
+      icon: <PenTool className="w-8 h-8" />,
+      description: "Professional audiobook narration"
+    },
+    {
+      name: "E-Learning",
+      src: "/Elearning.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "Narration",
+      src: "/narration.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "Cartoon Dubbing Or Voices",
+      src: "/cartoon.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "IVR",
+      src: "/ivr.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "Character Voices (More Than 10)",
+      src: "/character.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+    {
+      name: "Narration (Story/other)",
+      src: "/Narration.jpg",
+      icon: <Monitor className="w-8 h-8" />,
+      description: "Interactive e-learning solutions"
+    },
+  ];
 
   const services = [
     {
@@ -332,38 +326,47 @@ const ourServices = [
       <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 ${fadeInUp('services')}`}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text ">
-              <SparklesText>Our Premium Services</SparklesText>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
+              Our Premium Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive creative solutions delivered by industry experts with years of experience
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {ourServices.map((service, index) => (
+              <div
+                key={index}
+                className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:scale-105 ${staggeredFadeIn('services', index * 100)}`}
+              >
+                <div className="aspect-w-16 aspect-h-10 relative overflow-hidden">
+                <Image
+  src={service.src}
+  alt={service.name}
+  width={800}        // ya aapki desired width
+  height={192}       // h-48 = 48 x 4 = 192px
+  className="w-full object-cover transition-transform duration-500 group-hover:scale-110"
+/>
 
-<DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
-  <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
-    If it’s your first step into digital — make it powerful.
-  </p>
-
-  {ourServices.map((item, index) => (
-    <DraggableCardBody key={index} className={item.className}>
-      <img
-        src={item.src}
-        alt={item.name}
-        className="pointer-events-none relative z-10 h-80 w-80 object-cover"
-      />
-      <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-        {item.name}
-      </h3>
-      <p className="mt-1 text-center text-sm text-neutral-500 dark:text-neutral-400 max-w-xs px-2">
-        {item.description}
-      </p>
-    </DraggableCardBody>
-  ))}
-</DraggableCardContainer>
-
-
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 left-4 p-3 bg-white/90 backdrop-blur-sm rounded-xl transform -translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="text-red-600">{service.icon}</div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-red-600 transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <button className="text-red-600 font-semibold hover:text-red-700 transition-colors flex items-center space-x-2">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
