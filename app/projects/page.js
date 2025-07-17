@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import Navbar from "../components/nav";
 import Footer from "../components/Footer";
 import Image from 'next/image';
@@ -83,10 +83,49 @@ const driveVideos = [
     title: 'YouTube Story 2'
   }
 ];
+
+const otherVo = [
+  {
+    name: "skyrider e rikshaw",
+    src: "https://drive.google.com/file/d/1akJFpOaLWgrJWsi2RhObo0f2LDhHWdfg/preview",
+  },
+  {
+    name: "phone pay ad",
+    src: "https://drive.google.com/file/d/1bCyOd6pFTv4r5ZKqqf67EMrM6GYVCjNX/preview",
+  },
+  {
+    name: "govrnment Bank fraud ad",
+    src: "https://drive.google.com/file/d/1bB2KLnb8bpH2j5sKZDWIcnJBqySGb2s5/preview",
+  },
+  {
+    name: "fraud call",
+    src: "https://drive.google.com/file/d/1bH37CmICeiIx-_jMO5P1BwknUtT_YKV5/preview",
+  },
+  {
+    name: "fastrack company",
+    src: "https://drive.google.com/file/d/1azmzivY_Z3G7X1cG2kBvnLjEywKeHCub/preview",
+  },
+  {
+    name: "Buddha & The Beggar – Voice Narration",
+    src: "https://drive.google.com/file/d/1b6FQPwaeParU-PAZbcKPsyNxmPa2ysXr/preview",
+  },
+];
+
 const ProjectPage = () => {
 
   const [activeVideo, setActiveVideo] = useState(null);
   const [activeVideo2, setActiveVideo2] = useState(null);
+
+
+const canvasRef = useRef(null);
+
+useEffect(() => {
+  if (canvasRef.current) {
+    canvasRef.current.enable(); // if enable is a valid method
+  }
+}, []);
+
+
 
   return (
     
@@ -107,7 +146,7 @@ const ProjectPage = () => {
       {/* Hero Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-[15vw] font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-none">
-          <TypingAnimation>Our Services</TypingAnimation>
+          <TypingAnimation className="text-5xl">Our Services</TypingAnimation>
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -248,6 +287,46 @@ const ProjectPage = () => {
         </div>
       </div>
     </section>
+
+    {/* Some Other Voiceovers */}
+<section className="bg-gradient-to-br from-white via-gray-50 to-gray-100 p-8 rounded-3xl shadow-xl max-w-3xl mx-auto mt-16 text-center">
+  <h2 className="text-3xl font-extrabold text-gray-800 mb-8 tracking-tight text-red-600">
+    🎙️ Explore More of Mohit's Voice Magic
+  </h2>
+  <p className="text-gray-600 mb-10 text-sm sm:text-base max-w-xl mx-auto">
+    Dive into a selection of diverse voice-over samples delivered with precision, emotion, and clarity. Whether it's storytelling, explainer, or commercial — Mohit adapts seamlessly to every tone.
+  </p>
+
+  <div className="space-y-8">
+    {/* Highlighted Voice Over */}
+    <div className="bg-white border border-gray-200 p-5 rounded-xl shadow-inner">
+      <p className="text-base font-medium mb-3 text-yellow-600">✨ Featured Sample</p>
+   
+    </div>
+
+    {/* Other Voice Samples */}
+    <div className="grid sm:grid-cols-2 gap-6">
+      {otherVo.map((item, index) => (
+        <div key={index} className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm text-left">
+          <p className="text-sm font-semibold mb-2 text-orange-700">🎧 {item.name}</p>
+          <iframe
+            src={item.src}
+            width="100%"
+            height="50"
+            allow="autoplay"
+            className="w-full rounded"
+          ></iframe>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
       {/* CTA */}
       <section className=" bg-gradient-to-r from-red-600 to-pink-600 text-white text-center p-20 max-w-6xl my-20 m-auto px-4 rounded-lg">

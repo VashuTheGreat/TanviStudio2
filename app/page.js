@@ -139,15 +139,23 @@ const ProfessionalWebsite = () => {
   const testimonials = [
     {
       quote:
-        "He is fantastic at his work, very high-quality work. I was totally satisfied with this project.",
-      name: "Shudipd",
+        "Excellent VO of different characters, Timely, Punctual, Eager to get the work perfected. Did more then asked. Will work again",
+        name:'Sanyahhayat',
       //designation: "Product Manager at TechFlow",
       src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 5,
     },
     {
       quote:
-        "Really liked his work, very polite and flexible with the multiple iterations. It's rare to find a product that delivers on all its promises.Good.",
+        "Mohit ji is an exceptional voice artist with a rich, engaging tone and remarkable versatility. His professionalism, quick turnaround, and ability to bring scripts to life with perfect emotion and clarity make him a true asset. Highly recommended!",
+        name:'Shreyans',
+      //designation: "Product Manager at TechFlow",
+      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      rating: 5,
+    },
+    {
+      quote:
+        "Really liked his work, very polite and flexible with the multiple iterations.",
       name: "Promorph",
       //designation: "CTO at InnovateSphere",
       src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -155,24 +163,24 @@ const ProfessionalWebsite = () => {
     },
     {
       quote:
-        "Very fast. highly recommended, Really liked his work, very polite and flexible with the multiple iterations.",
-      name: "Narinderbti",
+        "He is fantastic at his work, very high-quality work. I was totally satisfied with this project.",
+      name: "lamshudipd",
       //designation: "Operations Director at CloudScale",
       src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 5,
     },
     {
       quote:
-        "Talented person on fiverr. Will order again. Outstanding support and robust features. ",
-      name: "Jouttatheboxbon",
+        "Good. Talented person on fiverr. Will order again.",
+      name: "Bon P",
       //designation: "Engineering Lead at DataPro",
       src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 5,
     },
     {
       quote:
-        "Excellent VO of different characters, Timely, Punctual, Eager to get the work perfected. Did more then asked. Will work again",
-      name: "Sanyahhayat",
+        "Very fast. highly recommended.",
+      name: "Narinder Singh",
       // designation: "VP of Technology at FutureNet",
       src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 5,
@@ -448,6 +456,80 @@ const ProfessionalWebsite = () => {
         </div>
       </section>
 
+
+
+
+      {/* Head Rj Mohit Mathuriya */}
+       <section id="team" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-16 ${fadeInUp('team')}`}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              Meet Our <span className="text-red-600">Organizer Head</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className={`${fadeInUp('team')}`}>
+              <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl blur opacity-20"></div>
+              {/* <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900"> */}
+                <Image
+                  src="/rjmohitmathuriya.jpg"
+                  alt="RJ Mohit Mathuriya"
+                  width={1280}
+                  height={384} // approximate 16:9 for h-96
+                  className="relative object-cover rounded-2xl shadow-2xl"
+                />
+              {/* </BackgroundGradient> */}
+              </div>
+            </div>
+
+
+
+            
+
+            <div className={`${fadeInUp('team')}`}>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Rj Mohit Mathuriya</h3>
+                  <p className="text-lg text-red-600 font-semibold mb-4">Radio Jockey & Voice Artist</p>
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-gray-600">8+ Years Experience</span>
+                  </div>
+                </div>
+
+                <div className="prose prose-lg text-gray-600">
+                  <p className="mb-4">
+                    RJ Mohit Mathuriya, a talented voice artist from Akashvani Radio, has worked across radio, television, YouTube, and various brand ads. He has lent his voice and creativity to major brands like PhonePe, NoBroker.com, Jooyo Hotel, and Fastrack, as well as important government ads and documentaries including campaigns for PNB Bank, Corona awareness, and the Balika Kaushalya Yojana with Prime Minister Narendra Modi. His voice connects with people and brings stories to life across every platform.
+                  </p>
+                  <p>
+                 With years of experience in the media industry, Mohit has made his mark across radio, television, YouTube, and digital platforms. He has lent his voice to popular brand ads for PhonePe, NoBroker.com, Jooyo Hotel, and Fastrack, delivering performances that connect with audiences. Mohit has also contributed to major government campaigns and documentaries, including those for PNB Bank, COVID-19 awareness, and the Balika Kaushalya Yojana featuring Prime Minister Narendra Modi. Known for his clear voice and engaging delivery, he remains a trusted name in Indian media.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  {['Working for Radio', ' Television', 'Youtube','Radio Jockey','Voice Artist' ].map((skill) => (
+                    <span key={skill} className="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+                <Link href={'/contact'}>
+                <button className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                  Contact US
+                </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section */}
       <section id="team" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -464,7 +546,7 @@ const ProfessionalWebsite = () => {
               {/* <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900"> */}
                 <Image
                   src="/Editor.jpg"
-                  alt="Raman Saini"
+                  alt="Dheeraj prajapati"
                   width={1280}
                   height={384} // approximate 16:9 for h-96
                   className="relative object-cover rounded-2xl shadow-2xl"
@@ -473,10 +555,14 @@ const ProfessionalWebsite = () => {
               </div>
             </div>
 
+
+
+            
+
             <div className={`${fadeInUp('team')}`}>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Raman Saini</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Dheeraj prajapati</h3>
                   <p className="text-lg text-red-600 font-semibold mb-4">Video Editor & Creative Writer</p>
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="flex items-center space-x-1">
@@ -495,7 +581,7 @@ const ProfessionalWebsite = () => {
                     that engages audiences and drives results.
                   </p>
                   <p>
-                    From advertisement scripts to storytelling, Raman brings creativity and technical 
+                    From advertisement scripts to storytelling, Dheeraj brings creativity and technical 
                     expertise to every project, ensuring your message resonates with your target audience.
                   </p>
                 </div>
@@ -509,7 +595,7 @@ const ProfessionalWebsite = () => {
                 </div>
                 <Link href={'/contact'}>
                 <button className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                  Contact Raman
+                  Contact Dheeraj
                 </button>
                 </Link>
               </div>

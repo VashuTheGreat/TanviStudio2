@@ -235,8 +235,64 @@ const AboutPage = () => {
         </div>
       </section>
 
+    <section className="bg-gradient-to-br from-gray-50 via-gray-100 to-white text-gray-800 py-12">
+      <div className="max-w-7xl mx-auto px-6 space-y-16">
+        
+
+        {/* 2. Agency Mission */}
+        <div className="bg-blue-100 p-6 rounded-xl text-center shadow ">
+          <h2 className="text-2xl font-bold">
+            We are your one-stop marketing agency for all your needs!
+          </h2>
+        </div>
+
+        {/* 3. Services List */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4 text-center">Our Services</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-sm">
+            {[
+              "Social Media Marketing",
+              "SEO",
+              "Google Ads",
+              "Website",
+              "WhatsApp Marketing",
+              "Instagram Optimization",
+              "Facebook Optimization",
+              "YouTube Optimization",
+              "Thumbnails",
+              "Logo Design",
+              "Voiceover",
+              "Script Writing",
+              "E-learning",
+              "Dubbing",
+              "IVR",
+              "Advertisement",
+              "Documentaries",
+              "Radio Show",
+              "Transcription",
+              "Translation",
+              "Male/Female Voiceovers",
+              "All Language Voiceovers",
+            ].map((service, index) => (
+              <span
+                key={index}
+                className="bg-white px-3 py-2 rounded shadow text-center hover:bg-blue-50 transition"
+              >
+                {service}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        
+
+       
+
+       </div>
+    </section>
+
       {/* What We Do */}
-      <section id="services-about" className=" py-20 bg-gradient-to-br from-red-50 via-pink-50 to-white">
+      <section id="services-about" className=" py-20 bg-gradient-to-br from-red-50 via-pink-100 to-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-10 text-gray-900">What We Do</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
